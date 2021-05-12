@@ -61,11 +61,11 @@
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TemporaryFileLocationXML>C:\Users\USTHLAR\AppData\Local\Temp\Engine_10084_23f0cfc79fb84e808ddddd4409fe81df_\Engine_29416_278214d3e0b343ea9dfbabae49b90c6c_.xml</TemporaryFileLocationXML>
+          <TemporaryFileLocationXML>C:\Users\USTHLAR\AppData\Local\Temp\Engine_32032_536ca129007143f7940c1fee4310e137_\Engine_16688_1f19560c72504704a9f7e01e81449dad_.xml</TemporaryFileLocationXML>
           <IsMetric value="False" />
           <ImageWidth>2</ImageWidth>
           <ImageHeight>2</ImageHeight>
-          <ImageResolution>1</ImageResolution>
+          <ImageResolution>3</ImageResolution>
           <ReferenceMap />
           <BackgroundColor>#fdfeff</BackgroundColor>
           <DropShadow>False</DropShadow>
@@ -189,13 +189,16 @@
           <Filename>WindRing2x2.png</Filename>
           <ModifyFilename value="False" />
           <StopIfNotFound value="True" />
-          <ImageStyle FixedWidth="false" ImageWidth="200" ShowBorder="false" BorderWidth="1" BorderColor="#000000" />
+          <ImageStyle FixedWidth="true" ImageWidth="192" ShowBorder="false" BorderWidth="1" BorderColor="#000000" />
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
           <DefaultAnnotationText />
           <Left value="False" />
         </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
         <MetaInfo connection="Output">
           <RecordInfo>
             <Field name="Image" size="2147483647" source="Report:Image:" type="V_String" />
