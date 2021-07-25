@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<AlteryxDocument yxmdVer="2020.2">
+<AlteryxDocument yxmdVer="2021.2">
   <Nodes>
     <Node ToolID="1">
       <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
@@ -62,7 +62,7 @@
     </Node>
     <Node ToolID="4">
       <GuiSettings Plugin="AlteryxGuiToolkit.Questions.TextBox.QuestionTextBox">
-        <Position x="174" y="54" width="59" height="59" />
+        <Position x="210" y="54" width="59" height="59" />
       </GuiSettings>
       <Properties>
         <Configuration />
@@ -124,7 +124,7 @@
       <Properties>
         <Configuration>
           <TempFileType />
-          <OutputFile>%Question.LeftId% %Question.RightId% Airport Notes.html</OutputFile>
+          <OutputFile>%Question.OutputFolder%\%Question.LeftId% %Question.RightId% Airport Notes.html</OutputFile>
           <BatchMode value="False" />
           <DataField>Layout</DataField>
           <Separator>Continuous</Separator>
@@ -147,13 +147,10 @@
           <DefaultAnnotationText />
           <Left value="False" />
         </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
       </Properties>
       <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="AlteryxPortfolioComposerRenderPlugin" />
     </Node>
-    <Node ToolID="8">
+    <Node ToolID="13">
       <GuiSettings>
         <Position x="294" y="186" />
       </GuiSettings>
@@ -211,6 +208,20 @@ All Records Combined</DefaultAnnotationText>
       </Properties>
       <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="AlteryxPortfolioComposerLayoutPlugin" />
     </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.TextBox.QuestionTextBox">
+        <Position x="378" y="54" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name>OutputFolder</Name>
+          <AnnotationText>OutputFolder</AnnotationText>
+          <DefaultAnnotationText>OutputFolder</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
   </Nodes>
   <Connections>
     <Connection>
@@ -219,10 +230,10 @@ All Records Combined</DefaultAnnotationText>
     </Connection>
     <Connection>
       <Origin ToolID="5" Connection="True" />
-      <Destination ToolID="8" Connection="Control" />
+      <Destination ToolID="13" Connection="Control" />
     </Connection>
     <Connection>
-      <Origin ToolID="8" Connection="Output" />
+      <Origin ToolID="13" Connection="Output" />
       <Destination ToolID="9" Connection="Input" />
     </Connection>
     <Connection>
@@ -240,6 +251,7 @@ All Records Combined</DefaultAnnotationText>
     <CancelOnError value="False" />
     <DisableBrowse value="False" />
     <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
     <DisableAllOutput value="False" />
     <ShowAllMacroMessages value="False" />
     <ShowConnectionStatusIsOn value="True" />
@@ -257,6 +269,12 @@ All Records Combined</DefaultAnnotationText>
         <Namespace>Question</Namespace>
         <Name>RightId</Name>
         <Value>VUJ</Value>
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>OutputFolder</Name>
+        <Value />
         <IsNumeric value="False" />
       </Constant>
     </Constants>
@@ -277,6 +295,11 @@ All Records Combined</DefaultAnnotationText>
         <Description />
         <File />
       </Example>
+      <WorkflowId value="e7a30b0c-70a5-46d6-acec-235d46f18933" />
+      <Telemetry>
+        <PreviousWorkflowId value="" />
+        <OriginWorkflowId value="e7a30b0c-70a5-46d6-acec-235d46f18933" />
+      </Telemetry>
     </MetaInfo>
     <Events>
       <Enabled value="True" />
@@ -310,6 +333,16 @@ All Records Combined</DefaultAnnotationText>
               <Multiline value="False" />
               <Hidden value="False" />
             </Question>
+            <Question>
+              <Type>TextBox</Type>
+              <Description>OutputFolder</Description>
+              <Name>OutputFolder</Name>
+              <ToolId value="11" />
+              <Default />
+              <Password value="False" />
+              <Multiline value="False" />
+              <Hidden value="False" />
+            </Question>
           </Questions>
         </Question>
       </Questions>
@@ -324,7 +357,7 @@ All Records Combined</DefaultAnnotationText>
       <Wiz_ShowOutput value="True" />
       <Wiz_OpenOutputTools>
         <Tool ToolId="7" Selected="True" />
-        <Tool ToolId="8" Selected="True" />
+        <Tool ToolId="13" Selected="True" />
       </Wiz_OpenOutputTools>
       <Wiz_OutputMessage />
       <Wiz_NoOutputFilesMessage />
