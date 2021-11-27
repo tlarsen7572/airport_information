@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
-<AlteryxDocument yxmdVer="2021.2">
+<AlteryxDocument yxmdVer="2021.3">
   <Nodes>
     <Node ToolID="2">
       <GuiSettings Plugin="AlteryxSpatialPluginsGui.PolyBuild.PolyBuild">
-        <Position x="846" y="246" />
+        <Position x="714" y="258" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -19,7 +19,7 @@
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="Label" size="7" source="Formula: Trim([_CurrentField_])" type="String" />
+            <Field name="Label" size="255" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="WString" />
             <Field name="SpatialObj_Built" size="2147483647" source="PolyBuild: Method=SequencePolyline Source=Centroid" type="SpatialObj" />
           </RecordInfo>
           <SortInfo>
@@ -31,7 +31,7 @@
     </Node>
     <Node ToolID="3">
       <GuiSettings Plugin="AlteryxSpatialPluginsGui.CreatePoints.CreatePoints">
-        <Position x="750" y="162" />
+        <Position x="618" y="174" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -45,28 +45,24 @@
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="Landing Facility Site Number" size="11" source="Formula: Trim([_CurrentField_])" type="String" />
-            <Field name="Label" size="7" source="Formula: Trim([_CurrentField_])" type="String" />
-            <Field name="Rwy" size="3" source="Formula: Trim([_CurrentField_])" type="String" />
-            <Field name="Lat" scale="7" size="12" source="Formula: IF   Right([__RAW LATITUDE__],1) = &amp;#39;S&amp;#39;&#xA;THEN -[__FINAL LATITUDE__]&#xA;ELSE [__FINAL LATITUDE__]&#xA;ENDIF" type="FixedDecimal" />
-            <Field name="Lon" scale="7" size="12" source="Formula: IF   Right([__RAW LONGITUDE__],1) = &amp;#39;W&amp;#39;&#xA;THEN -[__FINAL LONGITUDE__]&#xA;ELSE [__FINAL LONGITUDE__]&#xA;ENDIF" type="FixedDecimal" />
-            <Field name="Sequence" source="Formula: (Multiple Sources)" type="Int32" />
+            <Field name="Landing Facility Site Number" size="255" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="WString" />
+            <Field name="Label" size="255" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="WString" />
+            <Field name="Rwy" size="255" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="WString" />
+            <Field name="Lat" scale="6" size="30" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="FixedDecimal" />
+            <Field name="Lon" scale="6" size="30" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="FixedDecimal" />
             <Field name="Centroid" size="2147483647" source="CreatePoints: x=Lon y=Lat" type="SpatialObj" />
           </RecordInfo>
-          <SortInfo>
-            <Field field="Landing Facility Site Number" order="" />
-          </SortInfo>
         </MetaInfo>
       </Properties>
       <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxCreatePoints" />
     </Node>
     <Node ToolID="6">
       <GuiSettings Plugin="AlteryxSpatialPluginsGui.ReportMap.ReportMap">
-        <Position x="942" y="162" />
+        <Position x="810" y="174" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TemporaryFileLocationXML>C:\Users\tlarsen\AppData\Local\Temp\5\Engine_2564_083a080576644186a8d912103eb8f712_\Engine_2816_14df70a41c8541b38f0f747deea472da_.xml</TemporaryFileLocationXML>
+          <TemporaryFileLocationXML>C:\Users\tlarsen\AppData\Local\Temp\8\Engine_8176_eac9dc6eaba44128b5da9ac4b4b50747_\Engine_9912_199fb1c11db74e3f9bcd62328f25b545_.xml</TemporaryFileLocationXML>
           <IsMetric value="False" />
           <ImageWidth>2</ImageWidth>
           <ImageHeight>2</ImageHeight>
@@ -169,7 +165,7 @@
     </Node>
     <Node ToolID="7">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
-        <Position x="1998" y="162" />
+        <Position x="1866" y="174" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -186,7 +182,7 @@
     </Node>
     <Node ToolID="8">
       <GuiSettings Plugin="PortfolioPluginsGui.ComposerImage.PortfolioComposerImage">
-        <Position x="942" y="246" />
+        <Position x="810" y="258" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -211,7 +207,7 @@
     </Node>
     <Node ToolID="9">
       <GuiSettings Plugin="PortfolioPluginsGui.ComposerOverlay.Overlay">
-        <Position x="1326" y="162" />
+        <Position x="1194" y="174" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -243,7 +239,7 @@
     </Node>
     <Node ToolID="11">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
-        <Position x="1134" y="162" />
+        <Position x="1002" y="174" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -274,7 +270,7 @@
     </Node>
     <Node ToolID="13">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="1038" y="162" />
+        <Position x="906" y="174" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -300,7 +296,7 @@
     </Node>
     <Node ToolID="14">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="1038" y="246" />
+        <Position x="906" y="258" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -339,7 +335,7 @@
     </Node>
     <Node ToolID="23">
       <GuiSettings Plugin="PortfolioPluginsGui.ComposerTable.PortfolioComposerTable">
-        <Position x="846" y="666" />
+        <Position x="714" y="678" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -374,7 +370,7 @@
     </Node>
     <Node ToolID="24">
       <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
-        <Position x="750" y="666" />
+        <Position x="618" y="678" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -421,7 +417,7 @@
     </Node>
     <Node ToolID="26">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="1422" y="162" />
+        <Position x="1290" y="174" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -447,7 +443,7 @@
     </Node>
     <Node ToolID="27">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="942" y="666" />
+        <Position x="810" y="678" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -473,7 +469,7 @@
     </Node>
     <Node ToolID="28">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
-        <Position x="1806" y="162" />
+        <Position x="1674" y="174" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -504,7 +500,7 @@
     </Node>
     <Node ToolID="29">
       <GuiSettings Plugin="PortfolioPluginsGui.ComposerLayout.PortfolioComposerLayout">
-        <Position x="1902" y="162" />
+        <Position x="1770" y="174" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -542,7 +538,7 @@ Each Individual Record</DefaultAnnotationText>
     </Node>
     <Node ToolID="32">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="846" y="582" />
+        <Position x="714" y="594" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -564,9 +560,9 @@ Each Individual Record</DefaultAnnotationText>
         <MetaInfo connection="Output">
           <RecordInfo>
             <Field name="Sort" source="Formula: (Multiple Sources)" type="Int32" />
-            <Field name="Label" size="2147483647" source="Formula: (Multiple Sources)" type="V_String" />
+            <Field name="Label" size="1073741823" source="(Multiple Sources)" type="V_WString" />
             <Field name="Frequency" size="100" source="Formula: Trim(ToString([_CurrentField_],3) + &quot; &quot; + [Comment])" type="V_String" />
-            <Field name="Comment" size="2147483647" source="Formula: (Multiple Sources)" type="V_String" />
+            <Field name="Comment" size="1073741823" source="(Multiple Sources)" type="V_WString" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -574,7 +570,7 @@ Each Individual Record</DefaultAnnotationText>
     </Node>
     <Node ToolID="33">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="750" y="330" />
+        <Position x="618" y="342" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -591,13 +587,13 @@ Each Individual Record</DefaultAnnotationText>
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="Landing Facility Site Number" size="11" source="Formula: Trim([_CurrentField_])" type="String" />
-            <Field name="Id" size="4" source="Formula: Trim([_CurrentField_])" type="String" />
-            <Field name="Name" size="50" source="Formula: Trim([_CurrentField_])" type="V_String" />
-            <Field name="Elevation" scale="1" size="10" source="Formula: ToNumber([RAW Airport Elevation])" type="FixedDecimal" />
-            <Field name="Unicom Frequency" scale="3" size="10" source="Formula: ToNumber(Trim(Substring([Field_1], 981, 7)))" type="FixedDecimal" />
-            <Field name="CTAF" scale="3" size="10" source="Formula: ToNumber(Trim(Substring([Field_1], 988, 7)))" type="FixedDecimal" />
-            <Field name="ICAO Identifier" size="7" source="Formula: Trim([_CurrentField_])" type="V_String" />
+            <Field name="Landing Facility Site Number" size="11" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="WString" />
+            <Field name="Id" size="4" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="WString" />
+            <Field name="ICAO Identifier" size="7" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="V_WString" />
+            <Field name="Name" size="50" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="V_WString" />
+            <Field name="Elevation" scale="1" size="11" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="FixedDecimal" />
+            <Field name="Unicom Frequency" scale="3" size="11" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="FixedDecimal" />
+            <Field name="CTAF" scale="3" size="11" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="FixedDecimal" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -605,7 +601,7 @@ Each Individual Record</DefaultAnnotationText>
     </Node>
     <Node ToolID="35">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
-        <Position x="942" y="582" />
+        <Position x="810" y="594" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -625,9 +621,9 @@ Frequency - Ascending</DefaultAnnotationText>
         <MetaInfo connection="Output">
           <RecordInfo>
             <Field name="Sort" source="Formula: (Multiple Sources)" type="Int32" />
-            <Field name="Label" size="2147483647" source="Formula: (Multiple Sources)" type="V_String" />
+            <Field name="Label" size="1073741823" source="(Multiple Sources)" type="V_WString" />
             <Field name="Frequency" size="100" source="Formula: Trim(ToString([_CurrentField_],3) + &quot; &quot; + [Comment])" type="V_String" />
-            <Field name="Comment" size="2147483647" source="Formula: (Multiple Sources)" type="V_String" />
+            <Field name="Comment" size="1073741823" source="(Multiple Sources)" type="V_WString" />
           </RecordInfo>
           <SortInfo locale="0">
             <Field field="Sort" order="Ascending" />
@@ -640,7 +636,7 @@ Frequency - Ascending</DefaultAnnotationText>
     </Node>
     <Node ToolID="37">
       <GuiSettings Plugin="PortfolioPluginsGui.ComposerTable.PortfolioComposerTable">
-        <Position x="1038" y="582" />
+        <Position x="906" y="594" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -674,7 +670,7 @@ Frequency - Ascending</DefaultAnnotationText>
         <MetaInfo connection="Output">
           <RecordInfo>
             <Field name="Sort" source="Formula: (Multiple Sources)" type="Int32" />
-            <Field name="Label" size="2147483647" source="Formula: (Multiple Sources)" type="V_String" />
+            <Field name="Label" size="1073741823" source="(Multiple Sources)" type="V_WString" />
             <Field name="Table" size="2147483647" source="Report:Table:Basic:" type="V_String" />
           </RecordInfo>
           <SortInfo>
@@ -687,7 +683,7 @@ Frequency - Ascending</DefaultAnnotationText>
     </Node>
     <Node ToolID="40">
       <GuiSettings Plugin="PortfolioPluginsGui.ComposerLayout.PortfolioComposerLayout">
-        <Position x="1326" y="582" />
+        <Position x="1194" y="594" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -723,7 +719,7 @@ All Records Combined</DefaultAnnotationText>
     </Node>
     <Node ToolID="42">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="1422" y="582" />
+        <Position x="1290" y="594" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -749,7 +745,7 @@ All Records Combined</DefaultAnnotationText>
     </Node>
     <Node ToolID="43">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
-        <Position x="1518" y="162" />
+        <Position x="1386" y="174" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -780,7 +776,7 @@ All Records Combined</DefaultAnnotationText>
     </Node>
     <Node ToolID="44">
       <GuiSettings Plugin="PortfolioPluginsGui.ComposerLayout.PortfolioComposerLayout">
-        <Position x="1614" y="162" />
+        <Position x="1482" y="174" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -818,7 +814,7 @@ Each Individual Record</DefaultAnnotationText>
     </Node>
     <Node ToolID="45">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="1710" y="162" />
+        <Position x="1578" y="174" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -844,7 +840,7 @@ Each Individual Record</DefaultAnnotationText>
     </Node>
     <Node ToolID="46">
       <GuiSettings Plugin="PortfolioPluginsGui.ComposerText.PortfolioComposerText">
-        <Position x="846" y="330" />
+        <Position x="714" y="342" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -871,13 +867,13 @@ Each Individual Record</DefaultAnnotationText>
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="Landing Facility Site Number" size="11" source="Formula: Trim([_CurrentField_])" type="String" />
-            <Field name="Id" size="4" source="Formula: Trim([_CurrentField_])" type="String" />
-            <Field name="Name" size="50" source="Formula: Trim([_CurrentField_])" type="V_String" />
-            <Field name="Elevation" scale="1" size="10" source="Formula: ToNumber([RAW Airport Elevation])" type="FixedDecimal" />
-            <Field name="Unicom Frequency" scale="3" size="10" source="Formula: ToNumber(Trim(Substring([Field_1], 981, 7)))" type="FixedDecimal" />
-            <Field name="CTAF" scale="3" size="10" source="Formula: ToNumber(Trim(Substring([Field_1], 988, 7)))" type="FixedDecimal" />
-            <Field name="ICAO Identifier" size="7" source="Formula: Trim([_CurrentField_])" type="V_String" />
+            <Field name="Landing Facility Site Number" size="11" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="WString" />
+            <Field name="Id" size="4" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="WString" />
+            <Field name="ICAO Identifier" size="7" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="V_WString" />
+            <Field name="Name" size="50" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="V_WString" />
+            <Field name="Elevation" scale="1" size="11" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="FixedDecimal" />
+            <Field name="Unicom Frequency" scale="3" size="11" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="FixedDecimal" />
+            <Field name="CTAF" scale="3" size="11" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="FixedDecimal" />
             <Field name="ElevationText" size="2147483647" source="Report:Text:" type="V_String" />
           </RecordInfo>
         </MetaInfo>
@@ -886,7 +882,7 @@ Each Individual Record</DefaultAnnotationText>
     </Node>
     <Node ToolID="47">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
-        <Position x="1230" y="162" />
+        <Position x="1098" y="174" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -923,7 +919,7 @@ Each Individual Record</DefaultAnnotationText>
     </Node>
     <Node ToolID="48">
       <GuiSettings Plugin="PortfolioPluginsGui.ComposerText.PortfolioComposerText">
-        <Position x="942" y="330" />
+        <Position x="810" y="342" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -950,13 +946,13 @@ Each Individual Record</DefaultAnnotationText>
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="Landing Facility Site Number" size="11" source="Formula: Trim([_CurrentField_])" type="String" />
-            <Field name="Id" size="4" source="Formula: Trim([_CurrentField_])" type="String" />
-            <Field name="Name" size="50" source="Formula: Trim([_CurrentField_])" type="V_String" />
-            <Field name="Elevation" scale="1" size="10" source="Formula: ToNumber([RAW Airport Elevation])" type="FixedDecimal" />
-            <Field name="Unicom Frequency" scale="3" size="10" source="Formula: ToNumber(Trim(Substring([Field_1], 981, 7)))" type="FixedDecimal" />
-            <Field name="CTAF" scale="3" size="10" source="Formula: ToNumber(Trim(Substring([Field_1], 988, 7)))" type="FixedDecimal" />
-            <Field name="ICAO Identifier" size="7" source="Formula: Trim([_CurrentField_])" type="V_String" />
+            <Field name="Landing Facility Site Number" size="11" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="WString" />
+            <Field name="Id" size="4" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="WString" />
+            <Field name="ICAO Identifier" size="7" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="V_WString" />
+            <Field name="Name" size="50" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="V_WString" />
+            <Field name="Elevation" scale="1" size="11" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="FixedDecimal" />
+            <Field name="Unicom Frequency" scale="3" size="11" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="FixedDecimal" />
+            <Field name="CTAF" scale="3" size="11" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="FixedDecimal" />
             <Field name="ElevationText" size="2147483647" source="Report:Text:" type="V_String" />
             <Field name="IdText" size="2147483647" source="Report:Text:" type="V_String" />
           </RecordInfo>
@@ -966,7 +962,7 @@ Each Individual Record</DefaultAnnotationText>
     </Node>
     <Node ToolID="49">
       <GuiSettings Plugin="PortfolioPluginsGui.ComposerText.PortfolioComposerText">
-        <Position x="1038" y="330" />
+        <Position x="906" y="342" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -993,13 +989,13 @@ Each Individual Record</DefaultAnnotationText>
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="Landing Facility Site Number" size="11" source="Formula: Trim([_CurrentField_])" type="String" />
-            <Field name="Id" size="4" source="Formula: Trim([_CurrentField_])" type="String" />
-            <Field name="Name" size="50" source="Formula: Trim([_CurrentField_])" type="V_String" />
-            <Field name="Elevation" scale="1" size="10" source="Formula: ToNumber([RAW Airport Elevation])" type="FixedDecimal" />
-            <Field name="Unicom Frequency" scale="3" size="10" source="Formula: ToNumber(Trim(Substring([Field_1], 981, 7)))" type="FixedDecimal" />
-            <Field name="CTAF" scale="3" size="10" source="Formula: ToNumber(Trim(Substring([Field_1], 988, 7)))" type="FixedDecimal" />
-            <Field name="ICAO Identifier" size="7" source="Formula: Trim([_CurrentField_])" type="V_String" />
+            <Field name="Landing Facility Site Number" size="11" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="WString" />
+            <Field name="Id" size="4" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="WString" />
+            <Field name="ICAO Identifier" size="7" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="V_WString" />
+            <Field name="Name" size="50" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="V_WString" />
+            <Field name="Elevation" scale="1" size="11" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="FixedDecimal" />
+            <Field name="Unicom Frequency" scale="3" size="11" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="FixedDecimal" />
+            <Field name="CTAF" scale="3" size="11" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="FixedDecimal" />
             <Field name="ElevationText" size="2147483647" source="Report:Text:" type="V_String" />
             <Field name="IdText" size="2147483647" source="Report:Text:" type="V_String" />
             <Field name="NameText" size="2147483647" source="Report:Text:" type="V_String" />
@@ -1010,7 +1006,7 @@ Each Individual Record</DefaultAnnotationText>
     </Node>
     <Node ToolID="52">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
-        <Position x="1230" y="582" />
+        <Position x="1098" y="594" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1038,7 +1034,7 @@ Each Individual Record</DefaultAnnotationText>
     </Node>
     <Node ToolID="54">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="1134" y="498" />
+        <Position x="1002" y="510" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1064,7 +1060,7 @@ Each Individual Record</DefaultAnnotationText>
     </Node>
     <Node ToolID="55">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="1134" y="582" />
+        <Position x="1002" y="594" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1102,384 +1098,9 @@ Each Individual Record</DefaultAnnotationText>
         </Annotation>
       </Properties>
     </Node>
-    <Node ToolID="57">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-        <Position x="114" y="162" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <Passwords />
-          <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">APT.yxdb</File>
-          <FormatSpecificOptions />
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText>APT.yxdb</DefaultAnnotationText>
-          <Left value="False" />
-        </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
-        <MetaInfo connection="Output">
-          <RecordInfo>
-            <Field name="Landing Facility Site Number" size="11" source="Formula: Trim([_CurrentField_])" type="String" />
-            <Field name="Id" size="4" source="Formula: Trim([_CurrentField_])" type="String" />
-            <Field name="Name" size="50" source="Formula: Trim([_CurrentField_])" type="V_String" />
-            <Field name="Elevation" scale="1" size="10" source="Formula: ToNumber([RAW Airport Elevation])" type="FixedDecimal" />
-            <Field name="Unicom Frequency" scale="3" size="10" source="Formula: ToNumber(Trim(Substring([Field_1], 981, 7)))" type="FixedDecimal" />
-            <Field name="CTAF" scale="3" size="10" source="Formula: ToNumber(Trim(Substring([Field_1], 988, 7)))" type="FixedDecimal" />
-            <Field name="ICAO Identifier" size="7" source="Formula: Trim([_CurrentField_])" type="V_String" />
-          </RecordInfo>
-        </MetaInfo>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
-    </Node>
-    <Node ToolID="58">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-        <Position x="114" y="498" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <Passwords />
-          <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">AWOS.yxdb</File>
-          <FormatSpecificOptions />
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText>AWOS.yxdb</DefaultAnnotationText>
-          <Left value="False" />
-        </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
-        <MetaInfo connection="Output">
-          <RecordInfo>
-            <Field name="WX Sensor Type" size="10" source="Formula: Trim([_CurrentField_])" type="V_String" />
-            <Field name="Station Frequency" scale="3" size="10" source="Formula: ToNumber(Trim(Substring([Field_1], 68, 7)))" type="FixedDecimal" />
-            <Field name="Landing Facility Site Number" size="11" source="Formula: Trim([_CurrentField_])" type="V_String" />
-          </RecordInfo>
-        </MetaInfo>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
-    </Node>
-    <Node ToolID="59">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-        <Position x="114" y="246" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <Passwords />
-          <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">RWY.yxdb</File>
-          <FormatSpecificOptions />
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText>RWY.yxdb</DefaultAnnotationText>
-          <Left value="False" />
-        </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
-        <MetaInfo connection="Output">
-          <RecordInfo>
-            <Field name="Landing Facility Site Number" size="11" source="Formula: Trim([_CurrentField_])" type="String" />
-            <Field name="Label" size="7" source="Formula: Trim([_CurrentField_])" type="String" />
-            <Field name="Rwy" size="3" source="Formula: Trim([_CurrentField_])" type="String" />
-            <Field name="Lat" scale="7" size="12" source="Formula: IF   Right([__RAW LATITUDE__],1) = &amp;#39;S&amp;#39;&#xA;THEN -[__FINAL LATITUDE__]&#xA;ELSE [__FINAL LATITUDE__]&#xA;ENDIF" type="FixedDecimal" />
-            <Field name="Lon" scale="7" size="12" source="Formula: IF   Right([__RAW LONGITUDE__],1) = &amp;#39;W&amp;#39;&#xA;THEN -[__FINAL LONGITUDE__]&#xA;ELSE [__FINAL LONGITUDE__]&#xA;ENDIF" type="FixedDecimal" />
-            <Field name="Sequence" source="Formula: (Multiple Sources)" type="Int32" />
-          </RecordInfo>
-        </MetaInfo>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
-    </Node>
-    <Node ToolID="60">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-        <Position x="114" y="582" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <Passwords />
-          <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">TWR.yxdb</File>
-          <FormatSpecificOptions />
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText>TWR.yxdb</DefaultAnnotationText>
-          <Left value="False" />
-        </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
-        <MetaInfo connection="Output">
-          <RecordInfo>
-            <Field name="Terminal Communications Facility ID" size="4" source="Formula: TrimRight([_CurrentField_])" type="String" />
-            <Field name="Frequency" size="60" source="Formula: TrimRight([_CurrentField_])" type="V_String" />
-            <Field name="Frequency Use" size="50" source="Formula: TrimRight([_CurrentField_])" type="V_String" />
-            <Field name="Frequency Number" scale="3" size="10" source="Formula: ToNumber(REGEX_Replace([Frequency], &quot;^([0-9.]+).*$&quot;, &quot;$1&quot;))" type="FixedDecimal" />
-            <Field name="Frequency Comment" size="60" source="Formula: REGEX_Replace([Frequency], &quot;^[^;]*(;(.*)|$)&quot;,&quot;$2&quot;)" type="V_String" />
-          </RecordInfo>
-        </MetaInfo>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
-    </Node>
-    <Node ToolID="61">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="210" y="162" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <Mode>Simple</Mode>
-          <Simple>
-            <Operator>=</Operator>
-            <Field>Id</Field>
-            <Operands>
-              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
-              <DateType>fixed</DateType>
-              <PeriodDate>2021-07-25 09:03:24</PeriodDate>
-              <PeriodType>
-              </PeriodType>
-              <PeriodCount>0</PeriodCount>
-              <Operand>%Question.ControlParam.FaaId%</Operand>
-              <StartDate>2021-07-25 09:03:24</StartDate>
-              <EndDate>2021-07-25 09:03:24</EndDate>
-            </Operands>
-          </Simple>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <AnnotationText>Id</AnnotationText>
-          <DefaultAnnotationText>[Id] = "%Question.ControlParam.FaaId%"</DefaultAnnotationText>
-          <Left value="False" />
-        </Annotation>
-        <MetaInfo connection="True">
-          <RecordInfo>
-            <Field name="Landing Facility Site Number" size="11" source="Formula: Trim([_CurrentField_])" type="String" />
-            <Field name="Id" size="4" source="Formula: Trim([_CurrentField_])" type="String" />
-            <Field name="Name" size="50" source="Formula: Trim([_CurrentField_])" type="V_String" />
-            <Field name="Elevation" scale="1" size="10" source="Formula: ToNumber([RAW Airport Elevation])" type="FixedDecimal" />
-            <Field name="Unicom Frequency" scale="3" size="10" source="Formula: ToNumber(Trim(Substring([Field_1], 981, 7)))" type="FixedDecimal" />
-            <Field name="CTAF" scale="3" size="10" source="Formula: ToNumber(Trim(Substring([Field_1], 988, 7)))" type="FixedDecimal" />
-            <Field name="ICAO Identifier" size="7" source="Formula: Trim([_CurrentField_])" type="V_String" />
-          </RecordInfo>
-        </MetaInfo>
-        <MetaInfo connection="False">
-          <RecordInfo>
-            <Field name="Landing Facility Site Number" size="11" source="Formula: Trim([_CurrentField_])" type="String" />
-            <Field name="Id" size="4" source="Formula: Trim([_CurrentField_])" type="String" />
-            <Field name="Name" size="50" source="Formula: Trim([_CurrentField_])" type="V_String" />
-            <Field name="Elevation" scale="1" size="10" source="Formula: ToNumber([RAW Airport Elevation])" type="FixedDecimal" />
-            <Field name="Unicom Frequency" scale="3" size="10" source="Formula: ToNumber(Trim(Substring([Field_1], 981, 7)))" type="FixedDecimal" />
-            <Field name="CTAF" scale="3" size="10" source="Formula: ToNumber(Trim(Substring([Field_1], 988, 7)))" type="FixedDecimal" />
-            <Field name="ICAO Identifier" size="7" source="Formula: Trim([_CurrentField_])" type="V_String" />
-          </RecordInfo>
-        </MetaInfo>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
-    </Node>
-    <Node ToolID="62">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-        <Position x="282" y="498" />
-      </GuiSettings>
-      <Properties>
-        <Configuration joinByRecordPos="False">
-          <JoinInfo connection="Left">
-            <Field field="Landing Facility Site Number" />
-          </JoinInfo>
-          <JoinInfo connection="Right">
-            <Field field="Landing Facility Site Number" />
-          </JoinInfo>
-          <SelectConfiguration>
-            <Configuration outputConnection="Join">
-              <OrderChanged value="False" />
-              <CommaDecimal value="False" />
-              <SelectFields>
-                <SelectField field="Left_WX Sensor Type" selected="True" input="Left_" />
-                <SelectField field="Left_Station Frequency" selected="True" input="Left_" />
-                <SelectField field="Left_Landing Facility Site Number" selected="True" input="Left_" />
-                <SelectField field="Right_Landing Facility Site Number" selected="False" rename="Right_Landing Facility Site Number" input="Right_" />
-                <SelectField field="*Unknown" selected="False" />
-              </SelectFields>
-            </Configuration>
-          </SelectConfiguration>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-        <MetaInfo connection="Left">
-          <RecordInfo>
-            <Field name="WX Sensor Type" size="10" source="Formula: Trim([_CurrentField_])" type="V_String" />
-            <Field name="Station Frequency" scale="3" size="10" source="Formula: ToNumber(Trim(Substring([Field_1], 68, 7)))" type="FixedDecimal" />
-            <Field name="Landing Facility Site Number" size="11" source="Formula: Trim([_CurrentField_])" type="V_String" />
-          </RecordInfo>
-          <SortInfo noProgress="True">
-            <Field field="Landing Facility Site Number" />
-          </SortInfo>
-        </MetaInfo>
-        <MetaInfo connection="Join">
-          <RecordInfo>
-            <Field name="WX Sensor Type" size="10" source="Formula: Trim([_CurrentField_])" type="V_String" />
-            <Field name="Station Frequency" scale="3" size="10" source="Formula: ToNumber(Trim(Substring([Field_1], 68, 7)))" type="FixedDecimal" />
-            <Field name="Landing Facility Site Number" size="11" source="Formula: Trim([_CurrentField_])" type="V_String" />
-          </RecordInfo>
-          <SortInfo>
-            <Field field="Landing Facility Site Number" order="" />
-          </SortInfo>
-        </MetaInfo>
-        <MetaInfo connection="Right">
-          <RecordInfo>
-            <Field name="Landing Facility Site Number" size="11" source="Formula: Trim([_CurrentField_])" type="String" />
-          </RecordInfo>
-          <SortInfo noProgress="True">
-            <Field field="Landing Facility Site Number" />
-          </SortInfo>
-        </MetaInfo>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
-    </Node>
-    <Node ToolID="63">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-        <Position x="282" y="246" />
-      </GuiSettings>
-      <Properties>
-        <Configuration joinByRecordPos="False">
-          <JoinInfo connection="Left">
-            <Field field="Landing Facility Site Number" />
-          </JoinInfo>
-          <JoinInfo connection="Right">
-            <Field field="Landing Facility Site Number" />
-          </JoinInfo>
-          <SelectConfiguration>
-            <Configuration outputConnection="Join">
-              <OrderChanged value="False" />
-              <CommaDecimal value="False" />
-              <SelectFields>
-                <SelectField field="Left_Landing Facility Site Number" selected="True" input="Left_" />
-                <SelectField field="Left_Label" selected="True" input="Left_" />
-                <SelectField field="Left_Rwy" selected="True" input="Left_" />
-                <SelectField field="Left_Lat" selected="True" input="Left_" />
-                <SelectField field="Left_Lon" selected="True" input="Left_" />
-                <SelectField field="Left_Sequence" selected="True" input="Left_" />
-                <SelectField field="Right_Landing Facility Site Number" selected="False" rename="Right_Landing Facility Site Number" input="Right_" />
-                <SelectField field="*Unknown" selected="False" />
-              </SelectFields>
-            </Configuration>
-          </SelectConfiguration>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-        <MetaInfo connection="Left">
-          <RecordInfo>
-            <Field name="Landing Facility Site Number" size="11" source="Formula: Trim([_CurrentField_])" type="String" />
-            <Field name="Label" size="7" source="Formula: Trim([_CurrentField_])" type="String" />
-            <Field name="Rwy" size="3" source="Formula: Trim([_CurrentField_])" type="String" />
-            <Field name="Lat" scale="7" size="12" source="Formula: IF   Right([__RAW LATITUDE__],1) = &amp;#39;S&amp;#39;&#xA;THEN -[__FINAL LATITUDE__]&#xA;ELSE [__FINAL LATITUDE__]&#xA;ENDIF" type="FixedDecimal" />
-            <Field name="Lon" scale="7" size="12" source="Formula: IF   Right([__RAW LONGITUDE__],1) = &amp;#39;W&amp;#39;&#xA;THEN -[__FINAL LONGITUDE__]&#xA;ELSE [__FINAL LONGITUDE__]&#xA;ENDIF" type="FixedDecimal" />
-            <Field name="Sequence" source="Formula: (Multiple Sources)" type="Int32" />
-          </RecordInfo>
-          <SortInfo noProgress="True">
-            <Field field="Landing Facility Site Number" />
-          </SortInfo>
-        </MetaInfo>
-        <MetaInfo connection="Join">
-          <RecordInfo>
-            <Field name="Landing Facility Site Number" size="11" source="Formula: Trim([_CurrentField_])" type="String" />
-            <Field name="Label" size="7" source="Formula: Trim([_CurrentField_])" type="String" />
-            <Field name="Rwy" size="3" source="Formula: Trim([_CurrentField_])" type="String" />
-            <Field name="Lat" scale="7" size="12" source="Formula: IF   Right([__RAW LATITUDE__],1) = &amp;#39;S&amp;#39;&#xA;THEN -[__FINAL LATITUDE__]&#xA;ELSE [__FINAL LATITUDE__]&#xA;ENDIF" type="FixedDecimal" />
-            <Field name="Lon" scale="7" size="12" source="Formula: IF   Right([__RAW LONGITUDE__],1) = &amp;#39;W&amp;#39;&#xA;THEN -[__FINAL LONGITUDE__]&#xA;ELSE [__FINAL LONGITUDE__]&#xA;ENDIF" type="FixedDecimal" />
-            <Field name="Sequence" source="Formula: (Multiple Sources)" type="Int32" />
-          </RecordInfo>
-          <SortInfo>
-            <Field field="Landing Facility Site Number" order="" />
-          </SortInfo>
-        </MetaInfo>
-        <MetaInfo connection="Right">
-          <RecordInfo>
-            <Field name="Landing Facility Site Number" size="11" source="Formula: Trim([_CurrentField_])" type="String" />
-          </RecordInfo>
-          <SortInfo noProgress="True">
-            <Field field="Landing Facility Site Number" />
-          </SortInfo>
-        </MetaInfo>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
-    </Node>
-    <Node ToolID="64">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-        <Position x="282" y="582" />
-      </GuiSettings>
-      <Properties>
-        <Configuration joinByRecordPos="False">
-          <JoinInfo connection="Left">
-            <Field field="Terminal Communications Facility ID" />
-          </JoinInfo>
-          <JoinInfo connection="Right">
-            <Field field="Id" />
-          </JoinInfo>
-          <SelectConfiguration>
-            <Configuration outputConnection="Join">
-              <OrderChanged value="False" />
-              <CommaDecimal value="False" />
-              <SelectFields>
-                <SelectField field="Left_Terminal Communications Facility ID" selected="True" input="Left_" />
-                <SelectField field="Left_Frequency" selected="True" input="Left_" />
-                <SelectField field="Left_Frequency Use" selected="True" input="Left_" />
-                <SelectField field="Left_Frequency Number" selected="True" input="Left_" />
-                <SelectField field="Left_Frequency Comment" selected="True" input="Left_" />
-                <SelectField field="*Unknown" selected="False" />
-              </SelectFields>
-            </Configuration>
-          </SelectConfiguration>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-        <MetaInfo connection="Left">
-          <RecordInfo>
-            <Field name="Terminal Communications Facility ID" size="4" source="Formula: TrimRight([_CurrentField_])" type="String" />
-            <Field name="Frequency" size="60" source="Formula: TrimRight([_CurrentField_])" type="V_String" />
-            <Field name="Frequency Use" size="50" source="Formula: TrimRight([_CurrentField_])" type="V_String" />
-            <Field name="Frequency Number" scale="3" size="10" source="Formula: ToNumber(REGEX_Replace([Frequency], &quot;^([0-9.]+).*$&quot;, &quot;$1&quot;))" type="FixedDecimal" />
-            <Field name="Frequency Comment" size="60" source="Formula: REGEX_Replace([Frequency], &quot;^[^;]*(;(.*)|$)&quot;,&quot;$2&quot;)" type="V_String" />
-          </RecordInfo>
-          <SortInfo noProgress="True">
-            <Field field="Terminal Communications Facility ID" />
-          </SortInfo>
-        </MetaInfo>
-        <MetaInfo connection="Join">
-          <RecordInfo>
-            <Field name="Terminal Communications Facility ID" size="4" source="Formula: TrimRight([_CurrentField_])" type="String" />
-            <Field name="Frequency" size="60" source="Formula: TrimRight([_CurrentField_])" type="V_String" />
-            <Field name="Frequency Use" size="50" source="Formula: TrimRight([_CurrentField_])" type="V_String" />
-            <Field name="Frequency Number" scale="3" size="10" source="Formula: ToNumber(REGEX_Replace([Frequency], &quot;^([0-9.]+).*$&quot;, &quot;$1&quot;))" type="FixedDecimal" />
-            <Field name="Frequency Comment" size="60" source="Formula: REGEX_Replace([Frequency], &quot;^[^;]*(;(.*)|$)&quot;,&quot;$2&quot;)" type="V_String" />
-          </RecordInfo>
-          <SortInfo>
-            <Field field="Terminal Communications Facility ID" order="" />
-          </SortInfo>
-        </MetaInfo>
-        <MetaInfo connection="Right">
-          <RecordInfo>
-            <Field name="Id" size="4" source="Formula: Trim([_CurrentField_])" type="String" />
-          </RecordInfo>
-          <SortInfo noProgress="True">
-            <Field field="Id" />
-          </SortInfo>
-        </MetaInfo>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
-    </Node>
     <Node ToolID="67">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="378" y="498" />
+        <Position x="246" y="510" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1499,22 +1120,19 @@ Comment = ""
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="WX Sensor Type" size="10" source="Formula: Trim([_CurrentField_])" type="V_String" />
-            <Field name="Station Frequency" scale="3" size="10" source="Formula: ToNumber(Trim(Substring([Field_1], 68, 7)))" type="FixedDecimal" />
-            <Field name="Landing Facility Site Number" size="11" source="Formula: Trim([_CurrentField_])" type="V_String" />
+            <Field name="WX Sensor ID" size="4" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="WString" />
+            <Field name="WX Sensor Type" size="10" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="V_WString" />
+            <Field name="Station Frequency" scale="3" size="11" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="FixedDecimal" />
             <Field name="Sort" source="Formula: 0" type="Int32" />
             <Field name="Comment" size="2147483647" source="Formula: &quot;&quot;" type="V_String" />
           </RecordInfo>
-          <SortInfo>
-            <Field field="Landing Facility Site Number" order="" />
-          </SortInfo>
         </MetaInfo>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
     </Node>
     <Node ToolID="68">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="474" y="498" />
+        <Position x="342" y="510" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1535,8 +1153,8 @@ Comment = ""
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="Label" size="10" source="Formula: Trim([_CurrentField_])" type="V_String" />
-            <Field name="Frequency" scale="3" size="10" source="Formula: ToNumber(Trim(Substring([Field_1], 68, 7)))" type="FixedDecimal" />
+            <Field name="Label" size="10" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="V_WString" />
+            <Field name="Frequency" scale="3" size="11" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="FixedDecimal" />
             <Field name="Sort" source="Formula: 0" type="Int32" />
             <Field name="Comment" size="2147483647" source="Formula: &quot;&quot;" type="V_String" />
           </RecordInfo>
@@ -1546,7 +1164,7 @@ Comment = ""
     </Node>
     <Node ToolID="69">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="378" y="582" />
+        <Position x="246" y="594" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1567,24 +1185,20 @@ ELSEIF Contains([Freque...</DefaultAnnotationText>
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="Terminal Communications Facility ID" size="4" source="Formula: TrimRight([_CurrentField_])" type="String" />
-            <Field name="Frequency" size="60" source="Formula: TrimRight([_CurrentField_])" type="V_String" />
-            <Field name="Frequency Use" size="50" source="Formula: TrimRight([_CurrentField_])" type="V_String" />
-            <Field name="Frequency Number" scale="3" size="10" source="Formula: ToNumber(REGEX_Replace([Frequency], &quot;^([0-9.]+).*$&quot;, &quot;$1&quot;))" type="FixedDecimal" />
-            <Field name="Frequency Comment" size="60" source="Formula: REGEX_Replace([Frequency], &quot;^[^;]*(;(.*)|$)&quot;,&quot;$2&quot;)" type="V_String" />
+            <Field name="Terminal Communications Facility ID" size="4" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="WString" />
+            <Field name="Frequency Use" size="50" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="V_WString" />
+            <Field name="Frequency Number" scale="3" size="11" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="FixedDecimal" />
+            <Field name="Frequency Comment" size="60" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="V_WString" />
             <Field name="Sort" source="Formula: IF     Contains([Frequency Use], &quot;ATIS&quot;)&#xA;THEN   0&#xA;ELSEIF Contains([Frequency Use], &quot;CD&quot;)&#xA;THEN   2&#xA;ELSEIF Contains([Frequency Use], &quot;GND&quot;)&#xA;THEN   3&#xA;ELSEIF Contains([Frequency Use], &quot;LCL&quot;)&#xA;THEN   4&#xA;ELSEIF Contains([Frequency Use], &quot;APCH&quot;)&#xA;THEN   5&#xA;ELSEIF Contains([Frequency Use], &quot;DEP&quot;)&#xA;THEN   6&#xA;ELSE   7&#xA;ENDIF" type="Int32" />
             <Field name="Label" size="2147483647" source="Formula:  IF    Contains([Frequency Use], &quot;ATIS&quot;)&#xA;THEN   &quot;ATIS&quot;&#xA;ELSEIF Contains([Frequency Use], &quot;CD&quot;)&#xA;THEN   &quot;Cl. Del.&quot;&#xA;ELSEIF Contains([Frequency Use], &quot;GND&quot;)&#xA;THEN   &quot;Ground&quot;&#xA;ELSEIF Contains([Frequency Use], &quot;LCL&quot;)&#xA;THEN   &quot;Tower&quot;&#xA;ELSEIF Contains([Frequency Use], &quot;APCH&quot;)&#xA;THEN   &quot;Approach&quot;&#xA;ELSEIF Contains([Frequency Use], &quot;DEP&quot;)&#xA;THEN   &quot;Departure&quot;&#xA;ELSE   [Frequency Use]&#xA;ENDIF" type="V_String" />
           </RecordInfo>
-          <SortInfo>
-            <Field field="Terminal Communications Facility ID" order="" />
-          </SortInfo>
         </MetaInfo>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
     </Node>
     <Node ToolID="70">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
-        <Position x="570" y="582" />
+        <Position x="438" y="594" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1600,10 +1214,10 @@ ELSEIF Contains([Freque...</DefaultAnnotationText>
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="Label" size="2147483647" source="Formula: (Multiple Sources)" type="V_String" />
-            <Field name="Frequency" scale="3" size="10" source="Formula: (Multiple Sources)" type="FixedDecimal" />
+            <Field name="Label" size="1073741823" source="(Multiple Sources)" type="V_WString" />
+            <Field name="Frequency" scale="3" size="11" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="FixedDecimal" />
             <Field name="Sort" source="Formula: (Multiple Sources)" type="Int32" />
-            <Field name="Comment" size="2147483647" source="Formula: (Multiple Sources)" type="V_String" />
+            <Field name="Comment" size="1073741823" source="(Multiple Sources)" type="V_WString" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -1611,7 +1225,7 @@ ELSEIF Contains([Freque...</DefaultAnnotationText>
     </Node>
     <Node ToolID="71">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="474" y="582" />
+        <Position x="342" y="594" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1632,8 +1246,8 @@ ELSEIF Contains([Freque...</DefaultAnnotationText>
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="Frequency" scale="3" size="10" source="Formula: ToNumber(REGEX_Replace([Frequency], &quot;^([0-9.]+).*$&quot;, &quot;$1&quot;))" type="FixedDecimal" />
-            <Field name="Comment" size="60" source="Formula: REGEX_Replace([Frequency], &quot;^[^;]*(;(.*)|$)&quot;,&quot;$2&quot;)" type="V_String" />
+            <Field name="Frequency" scale="3" size="11" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="FixedDecimal" />
+            <Field name="Comment" size="60" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="V_WString" />
             <Field name="Sort" source="Formula: IF     Contains([Frequency Use], &quot;ATIS&quot;)&#xA;THEN   0&#xA;ELSEIF Contains([Frequency Use], &quot;CD&quot;)&#xA;THEN   2&#xA;ELSEIF Contains([Frequency Use], &quot;GND&quot;)&#xA;THEN   3&#xA;ELSEIF Contains([Frequency Use], &quot;LCL&quot;)&#xA;THEN   4&#xA;ELSEIF Contains([Frequency Use], &quot;APCH&quot;)&#xA;THEN   5&#xA;ELSEIF Contains([Frequency Use], &quot;DEP&quot;)&#xA;THEN   6&#xA;ELSE   7&#xA;ENDIF" type="Int32" />
             <Field name="Label" size="2147483647" source="Formula:  IF    Contains([Frequency Use], &quot;ATIS&quot;)&#xA;THEN   &quot;ATIS&quot;&#xA;ELSEIF Contains([Frequency Use], &quot;CD&quot;)&#xA;THEN   &quot;Cl. Del.&quot;&#xA;ELSEIF Contains([Frequency Use], &quot;GND&quot;)&#xA;THEN   &quot;Ground&quot;&#xA;ELSEIF Contains([Frequency Use], &quot;LCL&quot;)&#xA;THEN   &quot;Tower&quot;&#xA;ELSEIF Contains([Frequency Use], &quot;APCH&quot;)&#xA;THEN   &quot;Approach&quot;&#xA;ELSEIF Contains([Frequency Use], &quot;DEP&quot;)&#xA;THEN   &quot;Departure&quot;&#xA;ELSE   [Frequency Use]&#xA;ENDIF" type="V_String" />
           </RecordInfo>
@@ -1643,11 +1257,11 @@ ELSEIF Contains([Freque...</DefaultAnnotationText>
     </Node>
     <Node ToolID="72">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="1986" y="102" />
+        <Position x="1854" y="114" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\tlarsen\AppData\Local\Temp\5\Engine_2564_083a080576644186a8d912103eb8f712_\Engine_2816_9b95d0aeb08b43ceb00e3da262007de5_.yxdb</TempFile>
+          <TempFile>C:\Users\tlarsen\AppData\Local\Temp\8\Engine_8176_eac9dc6eaba44128b5da9ac4b4b50747_\Engine_9912_63505b9d19f84c06b7488638b4dba0a9_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -1671,7 +1285,7 @@ ELSEIF Contains([Freque...</DefaultAnnotationText>
     </Node>
     <Node ToolID="73">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="378" y="330" />
+        <Position x="246" y="342" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1689,7 +1303,7 @@ ELSEIF Contains([Freque...</DefaultAnnotationText>
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="Frequency" scale="3" size="10" source="Formula: ToNumber(Trim(Substring([Field_1], 988, 7)))" type="FixedDecimal" />
+            <Field name="Frequency" scale="3" size="11" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="FixedDecimal" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -1697,7 +1311,7 @@ ELSEIF Contains([Freque...</DefaultAnnotationText>
     </Node>
     <Node ToolID="74">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="378" y="414" />
+        <Position x="246" y="426" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1715,7 +1329,7 @@ ELSEIF Contains([Freque...</DefaultAnnotationText>
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="Frequency" scale="3" size="10" source="Formula: ToNumber(Trim(Substring([Field_1], 981, 7)))" type="FixedDecimal" />
+            <Field name="Frequency" scale="3" size="11" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="FixedDecimal" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -1723,7 +1337,7 @@ ELSEIF Contains([Freque...</DefaultAnnotationText>
     </Node>
     <Node ToolID="75">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="474" y="330" />
+        <Position x="342" y="342" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1746,7 +1360,7 @@ Comment = ""
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="Frequency" scale="3" size="10" source="Formula: ToNumber(Trim(Substring([Field_1], 988, 7)))" type="FixedDecimal" />
+            <Field name="Frequency" scale="3" size="11" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="FixedDecimal" />
             <Field name="Sort" source="Formula: 1" type="Int32" />
             <Field name="Label" size="2147483647" source="Formula: &quot;CTAF&quot;" type="V_String" />
             <Field name="Comment" size="2147483647" source="Formula: &quot;&quot;" type="V_String" />
@@ -1757,7 +1371,7 @@ Comment = ""
     </Node>
     <Node ToolID="76">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="474" y="414" />
+        <Position x="342" y="426" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1780,7 +1394,7 @@ Comment = ""
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="Frequency" scale="3" size="10" source="Formula: ToNumber(Trim(Substring([Field_1], 981, 7)))" type="FixedDecimal" />
+            <Field name="Frequency" scale="3" size="11" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="FixedDecimal" />
             <Field name="Sort" source="Formula: 1" type="Int32" />
             <Field name="Label" size="2147483647" source="Formula: &quot;Unicom&quot;" type="V_String" />
             <Field name="Comment" size="2147483647" source="Formula: &quot;&quot;" type="V_String" />
@@ -1791,7 +1405,7 @@ Comment = ""
     </Node>
     <Node ToolID="77">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="654" y="582" />
+        <Position x="522" y="594" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1808,18 +1422,18 @@ Comment = ""
         </Annotation>
         <MetaInfo connection="True">
           <RecordInfo>
-            <Field name="Label" size="2147483647" source="Formula: (Multiple Sources)" type="V_String" />
-            <Field name="Frequency" scale="3" size="10" source="Formula: (Multiple Sources)" type="FixedDecimal" />
+            <Field name="Label" size="1073741823" source="(Multiple Sources)" type="V_WString" />
+            <Field name="Frequency" scale="3" size="11" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="FixedDecimal" />
             <Field name="Sort" source="Formula: (Multiple Sources)" type="Int32" />
-            <Field name="Comment" size="2147483647" source="Formula: (Multiple Sources)" type="V_String" />
+            <Field name="Comment" size="1073741823" source="(Multiple Sources)" type="V_WString" />
           </RecordInfo>
         </MetaInfo>
         <MetaInfo connection="False">
           <RecordInfo>
-            <Field name="Label" size="2147483647" source="Formula: (Multiple Sources)" type="V_String" />
-            <Field name="Frequency" scale="3" size="10" source="Formula: (Multiple Sources)" type="FixedDecimal" />
+            <Field name="Label" size="1073741823" source="(Multiple Sources)" type="V_WString" />
+            <Field name="Frequency" scale="3" size="11" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="FixedDecimal" />
             <Field name="Sort" source="Formula: (Multiple Sources)" type="Int32" />
-            <Field name="Comment" size="2147483647" source="Formula: (Multiple Sources)" type="V_String" />
+            <Field name="Comment" size="1073741823" source="(Multiple Sources)" type="V_WString" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -1827,7 +1441,7 @@ Comment = ""
     </Node>
     <Node ToolID="78">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MultiFieldFormula.MultiFieldFormula">
-        <Position x="750" y="582" />
+        <Position x="618" y="594" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1849,10 +1463,10 @@ Comment = ""
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="Label" size="2147483647" source="Formula: (Multiple Sources)" type="V_String" />
+            <Field name="Label" size="1073741823" source="(Multiple Sources)" type="V_WString" />
             <Field name="Frequency" size="100" source="Formula: Trim(ToString([_CurrentField_],3) + &quot; &quot; + [Comment])" type="V_String" />
             <Field name="Sort" source="Formula: (Multiple Sources)" type="Int32" />
-            <Field name="Comment" size="2147483647" source="Formula: (Multiple Sources)" type="V_String" />
+            <Field name="Comment" size="1073741823" source="(Multiple Sources)" type="V_WString" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -1860,7 +1474,7 @@ Comment = ""
     </Node>
     <Node ToolID="79">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="654" y="162" />
+        <Position x="522" y="174" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1875,32 +1489,78 @@ Comment = ""
         </Annotation>
         <MetaInfo connection="True">
           <RecordInfo>
-            <Field name="Landing Facility Site Number" size="11" source="Formula: Trim([_CurrentField_])" type="String" />
-            <Field name="Label" size="7" source="Formula: Trim([_CurrentField_])" type="String" />
-            <Field name="Rwy" size="3" source="Formula: Trim([_CurrentField_])" type="String" />
-            <Field name="Lat" scale="7" size="12" source="Formula: IF   Right([__RAW LATITUDE__],1) = &amp;#39;S&amp;#39;&#xA;THEN -[__FINAL LATITUDE__]&#xA;ELSE [__FINAL LATITUDE__]&#xA;ENDIF" type="FixedDecimal" />
-            <Field name="Lon" scale="7" size="12" source="Formula: IF   Right([__RAW LONGITUDE__],1) = &amp;#39;W&amp;#39;&#xA;THEN -[__FINAL LONGITUDE__]&#xA;ELSE [__FINAL LONGITUDE__]&#xA;ENDIF" type="FixedDecimal" />
-            <Field name="Sequence" source="Formula: (Multiple Sources)" type="Int32" />
+            <Field name="Landing Facility Site Number" size="255" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="WString" />
+            <Field name="Label" size="255" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="WString" />
+            <Field name="Rwy" size="255" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="WString" />
+            <Field name="Lat" scale="6" size="30" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="FixedDecimal" />
+            <Field name="Lon" scale="6" size="30" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="FixedDecimal" />
           </RecordInfo>
-          <SortInfo>
-            <Field field="Landing Facility Site Number" order="" />
-          </SortInfo>
         </MetaInfo>
         <MetaInfo connection="False">
           <RecordInfo>
-            <Field name="Landing Facility Site Number" size="11" source="Formula: Trim([_CurrentField_])" type="String" />
-            <Field name="Label" size="7" source="Formula: Trim([_CurrentField_])" type="String" />
-            <Field name="Rwy" size="3" source="Formula: Trim([_CurrentField_])" type="String" />
-            <Field name="Lat" scale="7" size="12" source="Formula: IF   Right([__RAW LATITUDE__],1) = &amp;#39;S&amp;#39;&#xA;THEN -[__FINAL LATITUDE__]&#xA;ELSE [__FINAL LATITUDE__]&#xA;ENDIF" type="FixedDecimal" />
-            <Field name="Lon" scale="7" size="12" source="Formula: IF   Right([__RAW LONGITUDE__],1) = &amp;#39;W&amp;#39;&#xA;THEN -[__FINAL LONGITUDE__]&#xA;ELSE [__FINAL LONGITUDE__]&#xA;ENDIF" type="FixedDecimal" />
-            <Field name="Sequence" source="Formula: (Multiple Sources)" type="Int32" />
+            <Field name="Landing Facility Site Number" size="255" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="WString" />
+            <Field name="Label" size="255" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="WString" />
+            <Field name="Rwy" size="255" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="WString" />
+            <Field name="Lat" scale="6" size="30" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="FixedDecimal" />
+            <Field name="Lon" scale="6" size="30" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="FixedDecimal" />
           </RecordInfo>
-          <SortInfo>
-            <Field field="Landing Facility Site Number" order="" />
-          </SortInfo>
         </MetaInfo>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="80">
+      <GuiSettings>
+        <Position x="150" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Airport">%Question.ControlParam.FaaId%</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="APT">
+          <RecordInfo>
+            <Field name="Landing Facility Site Number" size="11" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="WString" />
+            <Field name="Id" size="4" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="WString" />
+            <Field name="ICAO Identifier" size="7" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="V_WString" />
+            <Field name="Name" size="50" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="V_WString" />
+            <Field name="Elevation" scale="1" size="11" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="FixedDecimal" />
+            <Field name="Unicom Frequency" scale="3" size="11" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="FixedDecimal" />
+            <Field name="CTAF" scale="3" size="11" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="FixedDecimal" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="RWY">
+          <RecordInfo>
+            <Field name="Landing Facility Site Number" size="255" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="WString" />
+            <Field name="Label" size="255" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="WString" />
+            <Field name="Rwy" size="255" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="WString" />
+            <Field name="Lat" scale="6" size="30" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="FixedDecimal" />
+            <Field name="Lon" scale="6" size="30" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="FixedDecimal" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="AWOS">
+          <RecordInfo>
+            <Field name="WX Sensor ID" size="4" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="WString" />
+            <Field name="WX Sensor Type" size="10" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="V_WString" />
+            <Field name="Station Frequency" scale="3" size="11" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="FixedDecimal" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="TWR">
+          <RecordInfo>
+            <Field name="Terminal Communications Facility ID" size="4" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="WString" />
+            <Field name="Frequency Use" size="50" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="V_WString" />
+            <Field name="Frequency Number" scale="3" size="11" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="FixedDecimal" />
+            <Field name="Frequency Comment" size="60" source="In-DB:DB=File:F:\repositories\airport_information\indb.indbc;" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="DownloadData.yxmc" />
     </Node>
   </Nodes>
   <Connections>
@@ -2037,58 +1697,6 @@ Comment = ""
       <Destination ToolID="52" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="57" Connection="Output" />
-      <Destination ToolID="61" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="58" Connection="Output" />
-      <Destination ToolID="62" Connection="Left" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="61" Connection="True" />
-      <Destination ToolID="62" Connection="Right" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="59" Connection="Output" />
-      <Destination ToolID="63" Connection="Left" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="61" Connection="True" />
-      <Destination ToolID="63" Connection="Right" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="60" Connection="Output" />
-      <Destination ToolID="64" Connection="Left" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="61" Connection="True" />
-      <Destination ToolID="64" Connection="Right" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="61" Connection="True" />
-      <Destination ToolID="33" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="61" Connection="True" />
-      <Destination ToolID="73" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="61" Connection="True" />
-      <Destination ToolID="74" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="62" Connection="Join" />
-      <Destination ToolID="67" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="63" Connection="Join" />
-      <Destination ToolID="79" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="64" Connection="Join" />
-      <Destination ToolID="69" Connection="Input" />
-    </Connection>
-    <Connection>
       <Origin ToolID="67" Connection="Output" />
       <Destination ToolID="68" Connection="Input" />
     </Connection>
@@ -2136,6 +1744,30 @@ Comment = ""
       <Origin ToolID="79" Connection="True" />
       <Destination ToolID="3" Connection="Input" />
     </Connection>
+    <Connection>
+      <Origin ToolID="80" Connection="RWY" />
+      <Destination ToolID="79" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="80" Connection="APT" />
+      <Destination ToolID="73" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="80" Connection="APT" />
+      <Destination ToolID="74" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="80" Connection="APT" />
+      <Destination ToolID="33" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="80" Connection="AWOS" />
+      <Destination ToolID="67" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="80" Connection="TWR" />
+      <Destination ToolID="69" Connection="Input" />
+    </Connection>
   </Connections>
   <Properties>
     <Memory default="True" />
@@ -2158,7 +1790,7 @@ Comment = ""
       <Constant>
         <Namespace>Question</Namespace>
         <Name>ControlParam.FaaId</Name>
-        <Value>VUJ</Value>
+        <Value>TTA</Value>
         <IsNumeric value="False" />
       </Constant>
     </Constants>
@@ -2233,6 +1865,7 @@ Comment = ""
       <Wiz_OpenOutputTools>
         <Tool ToolId="7" Selected="True" />
         <Tool ToolId="72" Selected="False" />
+        <Tool ToolId="80" Selected="True" />
       </Wiz_OpenOutputTools>
       <Wiz_OutputMessage />
       <Wiz_NoOutputFilesMessage />

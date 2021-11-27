@@ -1,0 +1,25 @@
+<InDBConnection>
+  <ConnectionType>GenericODBC</ConnectionType>
+  <IsNative>True</IsNative>
+  <DbToAlteryx>
+    <Connection>odbc:DSN=nasr;UID=nasr_access@ayx-data;PWD=__EncPwd1__</Connection>
+    <DecryptionAllowed>False</DecryptionAllowed>
+    <Passwords>44D257732B61A94900C236E237A8CB4B9C23F1682C8CFAC1082FA1B5D38C27795E7601A17</Passwords>
+    <FormatSpecificOptions>
+      <ReadUncommitted>False</ReadUncommitted>
+      <TableStyle>Quoted</TableStyle>
+    </FormatSpecificOptions>
+    <Type>GenericODBC</Type>
+  </DbToAlteryx>
+  <AlteryxToDb OutputDriverSelection="SameAsInput">
+    <Connection />
+    <DecryptionAllowed>False</DecryptionAllowed>
+    <Passwords />
+    <FormatSpecificOptions>
+      <TransactionSize>10000</TransactionSize>
+      <TransactionMessages>False</TransactionMessages>
+      <TableStyle>Quoted</TableStyle>
+    </FormatSpecificOptions>
+    <Type />
+  </AlteryxToDb>
+</InDBConnection>
