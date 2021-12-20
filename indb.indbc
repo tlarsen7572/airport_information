@@ -1,25 +1,26 @@
 <InDBConnection>
-  <ConnectionType>GenericODBC</ConnectionType>
+  <ConnectionType>Snowflake</ConnectionType>
   <IsNative>True</IsNative>
   <DbToAlteryx>
-    <Connection>odbc:DSN=nasr;UID=nasr_access@ayx-data;PWD=__EncPwd1__</Connection>
+    <Connection>odbc:DSN=NASR Snowflake;UID=NASR_ACCESS;PWD=__EncPwd1__</Connection>
     <DecryptionAllowed>False</DecryptionAllowed>
     <Passwords>44D257732B61A94900C236E237A8CB4B9C23F1682C8CFAC1082FA1B5D38C27795E7601A17</Passwords>
     <FormatSpecificOptions>
       <ReadUncommitted>False</ReadUncommitted>
       <TableStyle>Quoted</TableStyle>
     </FormatSpecificOptions>
-    <Type>GenericODBC</Type>
+    <Type>SnowflakeODBC</Type>
   </DbToAlteryx>
-  <AlteryxToDb OutputDriverSelection="SameAsInput">
-    <Connection />
+  <AlteryxToDb OutputDriverSelection="Specified">
+    <Connection>snowbl:DSN=NASR Snowflake;UID=NASR_ACCESS;PWD=__EncPwd1__;Staging=local;Method=table</Connection>
     <DecryptionAllowed>False</DecryptionAllowed>
-    <Passwords />
+    <Passwords>44D257732B61A94900C236E237A8CB4B9C23F1682C8CFAC1082FA1B5D38C27795E7601A17</Passwords>
     <FormatSpecificOptions>
-      <TransactionSize>10000</TransactionSize>
-      <TransactionMessages>False</TransactionMessages>
+      <ChunkSize>64</ChunkSize>
+      <NumThreads>4</NumThreads>
+      <CompressionType>GZip</CompressionType>
       <TableStyle>Quoted</TableStyle>
     </FormatSpecificOptions>
-    <Type />
+    <Type>SnowflakeBulkLoader</Type>
   </AlteryxToDb>
 </InDBConnection>
